@@ -1481,7 +1481,7 @@ if (AutoPlay.autoPlayer) {
   AutoPlay.info("replacing old version of autoplay"); 
   clearInterval(AutoPlay.autoPlayer); 
 }
-AutoPlay.autoPlayer = setInterval(AutoPlay.run, 150); // 100 is too quick
+AutoPlay.autoPlayer = setInterval(AutoPlay.run, 300); // 100 is too quick
 AutoPlay.findNextAchievement();
 l('versionNumber').innerHTML=
   'v. '+Game.version+" (with autoplay v."+AutoPlay.version+")";
