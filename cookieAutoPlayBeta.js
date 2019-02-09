@@ -199,7 +199,7 @@ AutoPlay.handleClicking = function() {
   if (Game.ascensionMode==1 && Game.Achievements["Hardcore"].won) 
 	setTimeout(Game.ClickCookie, 150); // extra clicking for speed baking
   if (AutoPlay.Config.ClickMode>1) 
-    for (var i = 1; i<10; i++) setTimeout(AutoPlay.speedClicking, 30*i);
+    for (var i = 1; i<10; i++) setTimeout(AutoPlay.speedClicking, 50*i);
   Game.ClickCookie();
 }
 
@@ -1481,7 +1481,7 @@ if (AutoPlay.autoPlayer) {
   AutoPlay.info("replacing old version of autoplay"); 
   clearInterval(AutoPlay.autoPlayer); 
 }
-AutoPlay.autoPlayer = setInterval(AutoPlay.run, 300); // 100 is too quick
+AutoPlay.autoPlayer = setInterval(AutoPlay.run, 150); // 100 is too quick
 AutoPlay.findNextAchievement();
 l('versionNumber').innerHTML=
   'v. '+Game.version+" (with autoplay v."+AutoPlay.version+")";
